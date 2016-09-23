@@ -1,2 +1,2 @@
-# celitea_portal_ng
-Next gen of Celitea association portal.
+# celitea_portal_index
+Next gen of Celitea association portal index page.
