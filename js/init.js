@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $("#feeds").rss(
-  "https://blog.yoitsu.moe/feeds/all.atom.xml",
+  "https://blog.celitea.xyz/index.php/feed/",
   {
     // how many entries do you want?
     // default: 4
