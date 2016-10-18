@@ -55,12 +55,12 @@ $("#feeds").rss(
     // outer template for the html transformation
     // default: "<ul>{entries}</ul>"
     // valid values: any string
-    layoutTemplate: '<ul class="collapsible popout" data-collapsible="accordion">{entries}</ul>',
+    layoutTemplate: '<div class="collection">{entries}</div>',
 
     // inner template for each entry
     // default: '<li><a href="{url}">[{author}@{date}] {title}</a><br/>{shortBodyPlain}</li>'
     // valid values: any string
-    entryTemplate: '<li><div class="collapsible-header"><a href="{url}">{title}<span class="right">@ {date}</span></a></div><div class="collapsible-body"><p>{shortBodyPlain}</p></div></li>',
+    entryTemplate: '<a href="{url}" class="collection-item">{title}<span class="badge">{date}</span></a>',
 
     // additional token definition for in-template-usage
     // default: {}
@@ -89,7 +89,7 @@ $("#feeds").rss(
     // the effect, which is used to let the entries appear
     // default: 'show'
     // valid values: 'show', 'slide', 'slideFast', 'slideSynced', 'slideFastSynced'
-    effect: 'slideFastSynced',
+    effect: 'show',
 
     // a callback, which gets triggered when an error occurs
     // default: function() { throw new Error("jQuery RSS: url don't link to RSS-Feed") }
@@ -108,8 +108,5 @@ $("#feeds").rss(
   // callback function
   // called after feeds are successfully loaded and after animations are done
   function callback() {
-      $('.collapsible').collapsible({
-        accordion : true// A setting that changes the collapsible behavior to expandable instead of the default accordion style
-      });
   }
 );
